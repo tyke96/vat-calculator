@@ -3,7 +3,7 @@ pipeline {
     environment {
         dockerCreds = credentials('dockerhub_login') // used to get the username for next var
         registry = "${dockerCreds_USR}/vatcal"
-        egistryCredentials = "dockerhub_login"
+        registryCredentials = "dockerhub_login"
         dockerImage = "" // empty var will be written to later
     }
     stages {
