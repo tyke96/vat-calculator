@@ -22,3 +22,5 @@ resource "aws_instance" "docker_server" {
   }
   user_data = "${file("init.sh")}"
 }
+
+variable creds_file {}
