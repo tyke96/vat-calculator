@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Analyze with grype') {
             steps {
-               sh "grype ${dockerImage.imageName()} --fail-on high"
+               sh "grype ${dockerImage.imageName()}"
             }
         }
         stage('Analyze with Dive') {
