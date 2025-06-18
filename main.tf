@@ -9,7 +9,7 @@ terraform {
 
 provider "aws" {
    shared_credentials_files = ["${var.creds_file}"]
-   region = "us-west-2a"
+   region = "us-west-2"
 }
 
 resource "aws_instance" "docker_server" {
