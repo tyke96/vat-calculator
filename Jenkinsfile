@@ -32,8 +32,7 @@ pipeline {
         }
         stage('Clean Up') {
             steps {
-                sh "docker image prune --all --force --filter 'until=48h'" //
-                ensure that we don't accrue too many out-of-date images
+                sh "docker image prune --all --force --filter 'until=48h'" //ensure that we don't accrue too many out-of-date images
             }
         }
     }
