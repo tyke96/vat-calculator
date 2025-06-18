@@ -20,6 +20,11 @@ pipeline {
                 }
             }
         }
+        stage('Analyze with Dive') {
+            steps {
+                sh "dive ${registry} --ci"
+            }
+        }
         stage('Push Image') {
             steps {
                 script {
