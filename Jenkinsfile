@@ -22,12 +22,12 @@ pipeline {
         }
         stage('Analyze with grype') {
             steps {
-               sh "grype ${dockerImage.imageName} --fail-on high"
+               sh "grype ${dockerImage.imageName()} --fail-on high"
             }
         }
         stage('Analyze with Dive') {
             steps {
-                sh "dive ${dockerImage.imageName} --ci"
+                sh "dive ${dockerImage.imageName()} --ci"
             }
         }
         stage('Push Image') {
