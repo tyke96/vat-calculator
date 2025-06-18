@@ -20,6 +20,11 @@ pipeline {
                 }
             }
         }
+        stage('Analyze with grype') {
+            steps {
+                sh "grype ${registry} --fail-on high"
+            }
+        }
         stage('Analyze with Dive') {
             steps {
                 sh "dive ${registry} --ci"
