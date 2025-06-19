@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vatcalc
-          image: tyke96/vatcal:latest
+          image: tyke96/vatcal:v2
           imagePullPolicy: Always
           resources:
             requests:
