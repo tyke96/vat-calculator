@@ -6,6 +6,7 @@ pipeline {
         registry = "${dockerCreds_USR}/vatcal"
         registryCredentials = "dockerhub_login"
         dockerImage = "" // empty var will be written to later
+        KUBECONFIG = "config.yaml"
     }
     stages {
         stage('Run Tests') {
