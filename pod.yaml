@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: calc-pod
+  labels:
+    app: vat-cal
+spec:
+  containers:
+  - image: tyke96/vatcal:latest
+    name: calc-container
+    ports:
+    - containerPort: 80
+    resources:
+      requests:
+        memory: 8Mi
+        cpu: 50m
+      limits:
+        memory: 10Mi
+        cpu: 100m
