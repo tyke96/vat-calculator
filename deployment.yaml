@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: vatcalc
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vatcalc
-          image: tyke96/vatcal:v2
+          image: tyke96/vatcal:latest
           imagePullPolicy: Always
           resources:
             requests:
@@ -28,7 +28,7 @@ spec:
           ports:
           - containerPort: 80
 ---
-apiVersion: v1
+apiVersion: v2
 kind: Service
 metadata:
   name: vatcalc-service
